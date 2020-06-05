@@ -1,0 +1,129 @@
+/* 
+light green #7ed56f
+mediuem green #55c57a
+dark green #28b485
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+    
+}
+.header{
+    height: 95vh;
+    background-image:
+    linear-gradient(to right bottom,
+     #7ed56fce, #55c57ad0),
+     url(/img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+}
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.logo{
+    height: 35px;
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: block;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    
+}
+.heading-primary-main{
+    display: block;
+    font-size: 55px;
+    font-family: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-family: 400;
+    letter-spacing: 17.4px;
+    padding-bottom: 35px;
+
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(20px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(-20px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    color: #777;
+    padding: 18px 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; /* put the transision into the intial state */
+ }
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0,.2);
+}
+.btn:active{
+    transform: translateY(-1.5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.2);
+}
+
+.white-btn{
+    background-color: #fff;
+    border-radius: 100px;
+
+    }
